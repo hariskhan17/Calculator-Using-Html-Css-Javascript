@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+/* Full-screen container styling */
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #e3f9ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Calculator styling */
+.calculator {
+  background: #3a4452;
+  padding: 20px;
+  border-radius: 15px; /* More rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Calculator scale effect on hover */
+.container:hover .calculator {
+  transform: scale(1.02); /* Subtle scaling effect */
+}
+
+/* Display styling */
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 45px;
+  border: none;
+  background: #f5f5f5;
+  color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: none;
+  transition: background 0.3s;
+}
+.equal {
+  /* background: #f39c12; */
+  background: green;
+}
+.equal:hover {
+  background: #e67e22;
+}
+/* Button styling */
+form input {
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  box-shadow: -4px -4px 8px rgba(255, 255, 255, 0.1),
+    4px 4px 8px rgba(0, 0, 0, 0.2);
+  background: #2d2d2d;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Button hover effect */
+form input:hover {
+  transform: scale(1.05);
+}
+
+/* Special button styling */
+form input.equal {
+  width: 145px; /* Wider button for equal sign */
+}
+
+form input[value="AC"],
+form input[value="DE"] {
+  background: #e74c3c;
+}
+
+form input[value="AC"]:hover,
+form input[value="DE"]:hover {
+  background: #c0392b;
+}
+
+/* Button styling for operators */
+form input[value="/"],
+form input[value="*"],
+form input[value="-"],
+form input[value="+"] {
+  background: #f39c12;
+}
+
+form input[value="/"]:hover,
+form input[value="*"]:hover,
+form input[value="-"]:hover,
+form input[value="+"]:hover {
+  background: #e67e22;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 480px) {
+  .calculator {
+    width: 90vw; /* Adjust width for small screens */
+    padding: 10px;
+  }
+
+  form input {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    margin: 8px;
+  }
+
+  form input.equal {
+    width: 110px;
+  }
+
+  form .display input {
+    font-size: 35px;
+    padding: 10px;
+  }
+}
